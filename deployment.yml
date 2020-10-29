@@ -2,21 +2,19 @@
 apiVersion: apps/v1
 kind: Deployment                    # Type of the kubernetes resource
 metadata:
-  name: employee-jdbc-mysql           # Name of the deployment
+  name: mysql           # Name of the deployment
   labels:                           # Labels applied to this deployment 
-    app: employee-jdbc
+    app: mysql
 spec:
   selector:
     matchLabels:                    # This deployment applies to the Pods matching the specified labels
-      app: employee-jdbc
-      tier: mysql
+      app: mysql
   strategy:
     type: Recreate
   template:                         # Template for the Pods in this deployment
     metadata:
       labels:                       # Labels to be applied to the Pods in this deployment
-        app: employee-jdbc
-        tier: mysql
+        app: mysql
     spec:                           # The spec for the containers that will be run inside the Pods in this deployment
       containers:
       - image: mysql:5.6            # The container image
