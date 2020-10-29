@@ -1,5 +1,7 @@
 # kubernetes-configmap-and-secret-explained
 
+# Encode PASSWORD of mysql using following command
+    echo -n "admin123" | base64
 # Deploying mysql in kubernetes cluster
     kubectl apply -f pv.yml
     kubectl apply -f pvc.yml
