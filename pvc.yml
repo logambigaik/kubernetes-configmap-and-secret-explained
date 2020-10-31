@@ -4,7 +4,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: mysql-pv-claim
   labels:
-    app: employee-jdbc
+    type: local
 spec:
   storageClassName: standard
   accessModes:
